@@ -18359,3 +18359,420 @@ font-size: 14px;
 }
 
 /* fleet page css ends */
+
+
+/* ................................................................................. */
+
+
+
+
+
+/* ................................................................................. */
+/* industries section 1 manufacturing page css */
+/* ===== NEW INDUSTRY CARD FIX ===== */
+/* ===== LIST STYLING ===== */
+.industry-list-new {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.industry-list-new li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: #6c757d;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.industry-list-new li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    color: #28a745;
+    font-size: 11px;
+}
+
+/* ===== CARD STRUCTURE ===== */
+.industry-card-fix {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 20px 18px; /* reduced height */
+}
+
+/* ===== CONTENT WIDTH (INCREASE CARD WIDTH FEEL) ===== */
+.industry-content-fix {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    max-width: 300px; /* increased from 260px */
+    margin: 0 auto;
+}
+
+/* ===== SUBHEADING (2 LINE FIX) ===== */
+.header-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    max-width: 520px;
+    margin-left: auto; /* keeps right alignment */
+}
+
+/* ===== CLICKABLE CARD ===== */
+.industry-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+/* ===== EQUAL HEIGHT FIX ===== */
+.service-section .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0; /* vertical spacing reduced */
+}
+
+.service-section .col-xl-4,
+.service-section .col-lg-4,
+.service-section .col-md-6 {
+    display: flex;
+}
+
+/* ===== REDUCE OVERALL CARD HEIGHT ===== */
+.single-service-style-2 {
+    padding: 25px 20px !important;
+}
+
+/* ===== OPTIONAL: CONTROL LIST HEIGHT (PERFECT ALIGNMENT) ===== */
+.industry-list-new {
+    min-height: 130px;
+}
+/* ================= RESPONSIVE FIX ================= */
+
+/* ---------- TABLET (≤ 992px) ---------- */
+@media (max-width: 992px) {
+
+    /* Stack properly */
+    .service-section .row {
+        flex-direction: row;
+    }
+
+    /* 2 cards per row */
+    .service-section .col-xl-4,
+    .service-section .col-lg-4,
+    .service-section .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Content width adjust */
+    .industry-content-fix {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Heading alignment center */
+    .header-text {
+        text-align: center !important;
+    }
+
+    .header-text p {
+        margin: 10px auto 0;
+        text-align: center;
+    }
+
+    /* Button center */
+    .header-btn {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ---------- MOBILE (≤ 576px) ---------- */
+@media (max-width: 576px) {
+
+    /* 1 card per row */
+    .service-section .col-xl-4,
+    .service-section .col-lg-4,
+    .service-section .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    /* Reduce padding */
+    .single-service-style-2 {
+        padding: 20px 15px !important;
+    }
+
+    /* Smaller titles */
+    .single-service-style-2 h3 {
+        font-size: 18px;
+    }
+
+    /* List text smaller */
+    .industry-list-new li {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    /* Remove fixed height for better flow */
+    .industry-list-new {
+        min-height: auto;
+    }
+
+    /* Subheading full width */
+    .header-text p {
+        -webkit-line-clamp: unset;
+        max-width: 100%;
+    }
+
+    /* Better spacing */
+    .service-section .row {
+        gap: 15px;
+    }
+}
+
+
+/* ---------- EXTRA SMALL (≤ 400px) ---------- */
+@media (max-width: 400px) {
+
+    .single-service-style-2 h3 {
+        font-size: 16px;
+    }
+
+    .industry-list-new li {
+        font-size: 12.5px;
+    }
+
+    .theme-btn {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}
+/* ===== HOVER TEXT VISIBILITY FIX ===== */
+
+/* Default smooth transition */
+.industry-card-fix,
+.industry-card-fix h3,
+.industry-card-fix li,
+.industry-card-fix li::before {
+    transition: all 0.3s ease;
+}
+
+/* On hover - change background */
+.industry-link:hover .industry-card-fix {
+    background: #166FD3; /* your blue tone */
+}
+
+/* Heading color */
+.industry-link:hover .industry-card-fix h3 {
+    color: #ffffff;
+}
+
+/* List text color */
+.industry-link:hover .industry-card-fix li {
+    color: #ffffff;
+}
+
+/* Tick color */
+.industry-link:hover .industry-card-fix li::before {
+    color: #90ee90; /* light green for visibility */
+}
+
+/* Optional: icon color invert (if SVG supports) */
+.industry-link:hover .industry-card-fix .icon img {
+    filter: brightness(0) invert(1);
+}
+/* industries section 1 manufacturing page css ends */
+/* ...................................................................................... */
+
+
+
+
+
+/* ...................................................................................... */
+/* industries section 2 trading page css starts */
+
+/* ===== REMOVE HOVER FROM FEATURE CARDS ===== */
+.trade-card {
+    background: #f5f5f5;
+    padding: 14px 18px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    font-size: 15px;
+    color: #333;
+
+    transition: none; /* ❌ remove animation */
+}
+
+/* REMOVE hover */
+.trade-card:hover {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.trade-card i {
+    color: #2b6cb0;
+}
+
+
+/* ===== STRONG HOVER FOR MAIN CLICKABLE HEADING ===== */
+.trade-heading a {
+    text-decoration: none;
+    color: #1a1a1a;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* underline animation */
+.trade-heading a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #2b6cb0;
+    transition: width 0.3s ease;
+}
+
+/* hover effect */
+.trade-heading a:hover {
+    color: #2b6cb0;
+}
+
+.trade-heading a:hover::after {
+    width: 100%;
+}
+/* ===== REMOVE GAP BETWEEN HEADER & CONTENT ===== */
+
+/* remove top margin from main section */
+.health-new-section .mt-5 {
+    margin-top: 10px !important; /* reduce from large gap */
+}
+
+/* reduce header bottom spacing */
+.health-new-section .header-text {
+    margin-bottom: 10px;
+}
+
+/* remove extra space from row */
+.health-new-section .row {
+    margin-bottom: 0;
+}
+
+/* tighten layout spacing */
+.health-layout-new {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* optional: reduce section padding */
+.health-new-section {
+    padding-top: 60px;  /* adjust if still large */
+    padding-bottom: 60px;
+}
+/* industries section 2 trading page css ends  */
+/* .................................................................................... */
+
+
+
+
+/* .................................................................................... */
+/* industries section 3 retail page css starts  */
+
+/* ===== RETAIL GRID FIX ===== */
+.retail-grid-new {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* ===== CARD STYLE ===== */
+.retail-card-new {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    height: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    transition: 0.3s ease;
+}
+
+/* clickable */
+.retail-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== CONTENT ===== */
+.retail-content h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+}
+
+/* ===== LIST ===== */
+.retail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.retail-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* icon bullet */
+.retail-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #28a745;
+    font-size: 12px;
+}
+
+/* ===== HOVER ONLY ON CARD (LIGHT) ===== */
+.retail-card-link:hover .retail-card-new {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transform: translateY(-4px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .retail-grid-new {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* industries section 3 retail page css ends  */
+/* .................................................................................... */
