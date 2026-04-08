@@ -17995,5 +17995,367 @@ font-size: 14px;
         padding: 0 10px; /* prevent edge touching */
     }
 }
+
 /* hrms page css ends */
 /* ................................................................................ */
+
+
+
+/* sugar page css starts */
+
+/* =========================
+   HEADING FIX (NO CONFLICT)
+========================= */
+
+.custom-heading-fix h2 {
+    white-space: normal !important;   /* FIX MAIN ISSUE */
+    word-break: break-word;
+    overflow-wrap: break-word;
+
+    line-height: 1.3;
+    max-width: 100%;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+    .custom-heading-fix h2 {
+        font-size: 34px;
+        max-width: 800px;
+    }
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+    .custom-heading-fix h2 {
+        font-size: 26px;
+        max-width: 90%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .custom-heading-fix h2 {
+        font-size: 20px;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+}
+/* =========================
+   FINAL HEADING FIX (STRONG)
+========================= */
+
+.title-section-area {
+    display: block !important;   /* 🔥 break flex causing stretch */
+    text-align: center;
+}
+
+.custom-heading-fix-2 {
+    width: 100%;
+}
+
+/* MAIN FIX */
+.custom-heading-fix-2 h2 {
+    white-space: normal !important;   /* 🔥 override nowrap */
+    display: block;
+
+    max-width: 650px;   /* 🔥 controls width */
+    margin: 0 auto;
+
+    line-height: 1.3;
+    text-align: center;
+
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+    .custom-heading-fix-2 h2 {
+        font-size: 34px;
+    }
+}
+
+/* TABLET */
+@media (max-width: 991px) {
+    .custom-heading-fix-2 h2 {
+        font-size: 26px;
+        max-width: 90%;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .custom-heading-fix-2 h2 {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+}
+/* =========================
+   PERFECT EQUAL HEIGHT FIX
+========================= */
+
+.custom-pricing-ui .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 🔥 MAKE COLUMNS FLEX */
+.custom-pricing-ui .row > div {
+    display: flex;
+}
+
+/* 🔥 MAKE CARD FULL HEIGHT */
+.custom-pricing-ui .single-pricing-items {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;   /* 👈 IMPORTANT */
+
+    border-radius: 18px;
+    padding: 28px 22px;
+
+    background: #fff;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.05);
+
+    transition: all 0.3s ease;
+}
+
+/* PUSH BUTTON TO BOTTOM */
+.custom-pricing-ui .theme-btn {
+    margin-top: auto;
+}
+
+/* HOVER */
+.custom-pricing-ui .single-pricing-items:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* TEXT SIZE CLEAN */
+.custom-pricing-ui .content h3 {
+    font-size: 19px;
+}
+
+.custom-pricing-ui .content p {
+    font-size: 13px;
+    color: #777;
+}
+
+.custom-pricing-ui .price-plan h2 {
+    font-size: 26px;
+}
+
+.custom-pricing-ui ul li {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+    .custom-pricing-ui .row {
+        display: block;
+    }
+
+    .custom-pricing-ui .row > div {
+        display: block;
+    }
+}
+/* sugar page css ends */
+
+
+/* crm page css starts */
+
+/* CRM Heading Fix - No Conflict */
+.crm-heading-fix h2 {
+    white-space: normal !important;   /* allow wrapping */
+    max-width: 900px;                 /* control width */
+    margin: 0 auto;                   /* center */
+    line-height: 1.3;                 /* better readability */
+    font-size: 36px;                  /* desktop size */
+    font-weight: 700;
+    color: #222;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .crm-heading-fix h2 {
+        font-size: 28px;
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .crm-heading-fix h2 {
+        font-size: 22px;
+        line-height: 1.4;
+        padding: 0 10px;
+    }
+}
+
+/* crm page css ends */
+
+
+
+
+/* fleet page css starts */
+
+/* ============================= */
+/* FLEET PROBLEM UI (NEW CLASS) */
+/* ============================= */
+
+.fleet-problem-ui .service-box-items-2 {
+    padding: 22px 18px; /* reduced padding */
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+/* ICON */
+.fleet-problem-ui .service-box-items-2 .icon {
+    margin-bottom: 12px;
+}
+
+/* HEADING */
+.fleet-problem-ui .service-box-items-2 h3 {
+    font-size: 18px; /* smaller clean */
+    line-height: 1.3;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* PARAGRAPH */
+.fleet-problem-ui .service-box-items-2 p {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* HOVER (premium subtle) */
+.fleet-problem-ui .service-box-items-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ============================= */
+/* DESKTOP OPTIMIZATION ONLY */
+/* ============================= */
+
+@media (min-width: 992px) {
+    .fleet-problem-ui .service-box-items-2 {
+        min-height: 230px; /* equal clean cards */
+    }
+
+    .fleet-problem-ui .service-box-items-2 h3 {
+        font-size: 17px; /* slightly tighter */
+    }
+
+    .fleet-problem-ui .service-box-items-2 p {
+        font-size: 13px;
+    }
+}
+
+/* ============================= */
+/* TABLET */
+/* ============================= */
+
+@media (max-width: 991px) {
+    .fleet-problem-ui .service-box-items-2 {
+        padding: 20px;
+    }
+
+    .fleet-problem-ui .service-box-items-2 h3 {
+        font-size: 17px;
+    }
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 576px) {
+    .fleet-problem-ui .service-box-items-2 {
+        padding: 18px;
+    }
+
+    .fleet-problem-ui .service-box-items-2 h3 {
+        font-size: 16px;
+    }
+
+    .fleet-problem-ui .service-box-items-2 p {
+        font-size: 13px;
+    }
+}
+/* Space between icon and text */
+.fleet-problem-ui .service-box-items-2 .icon {
+    margin-bottom: 18px; /* increase spacing */
+}
+
+/* Optional: slightly tighter heading alignment */
+.fleet-problem-ui .service-box-items-2 .content {
+    margin-top: 4px;
+}
+.fleet-problem-ui .service-box-items-2 .icon {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fleet-problem-ui .service-box-items-2 h3 {
+    margin-top: 6px;
+}
+/* ============================= */
+/* EQUAL CARDS + BIG IMAGE FIX */
+/* ============================= */
+
+.fleet-card-equal .news-carousel-active .news-card-items {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* 🔥 KEEP IMAGE BIG (same for all) */
+.fleet-card-equal .news-card-items .news-image {
+    height: 260px; /* increase from 220 → looks better */
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* CONTENT FLEX */
+.fleet-card-equal .news-card-items .news-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 22px;
+}
+
+/* TEXT AREA GROWS */
+.fleet-card-equal .news-card-items h5 {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* PUSH BUTTON DOWN */
+.fleet-card-equal .news-card-items .link-btn {
+    margin-top: auto;
+}
+
+/* ============================= */
+/* DESKTOP ONLY */
+/* ============================= */
+
+@media (min-width: 992px) {
+    .fleet-card-equal .news-carousel-active .news-card-items {
+        min-height: 420px; /* ensures equal card height */
+    }
+}
+
+/* fleet page css ends */
