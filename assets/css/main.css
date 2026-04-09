@@ -19844,4 +19844,534 @@ margin-right: 40px;   /* 🔥 increase this to push LEFT */   /* 🔥 KEY FIX (r
 
 
 /* ................................................................................ */
-/* heading alternate fixed */
+/* prodcuts final page css starts */
+
+/* ===== PRODUCT CARD STYLE ===== */
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 20px;
+    height: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Icon */
+.product-card .icon {
+    margin-bottom: 15px;
+}
+
+.product-card .icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Title */
+.product-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Description */
+.product-card p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+/* CTA */
+.product-card .view-btn {
+    font-size: 14px;
+    font-weight: 500;
+    color: #166FD3;
+}
+
+/* Hover */
+.product-link:hover .product-card {
+    background: #166FD3;
+}
+
+.product-link:hover h3,
+.product-link:hover p,
+.product-link:hover .view-btn {
+    color: #fff;
+}
+
+.product-link:hover .icon img {
+    filter: brightness(0) invert(1);
+}
+/* ===== PRODUCT ICON STYLE ===== */
+
+.product-card .icon {
+    margin-bottom: 15px;
+}
+
+/* Icon size + color */
+.product-card .icon i {
+    font-size: 42px;
+    color: #166FD3;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.product-link:hover .icon i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+/* OPTIONAL: better icon size on small screens */
+@media (max-width: 576px) {
+    .product-card .icon i {
+        font-size: 34px;
+    }
+}
+/* ===== PREMIUM ICON DESIGN ===== */
+
+.product-card .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: rgba(22, 111, 211, 0.08); /* light blue bg */
+
+    transition: all 0.3s ease;
+}
+
+/* Icon */
+.product-card .icon i {
+    font-size: 30px;
+    color: #166FD3;
+    transition: all 0.3s ease;
+}
+
+/* Hover - card */
+.product-link:hover .product-card {
+    background: #166FD3;
+}
+
+/* Hover - icon circle */
+.product-link:hover .icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hover - icon */
+.product-link:hover .icon i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+/* ===== CLEAN 3D HOVER ONLY ===== */
+
+.product-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover effect */
+.product-link:hover .product-card {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== CTA NORMAL ===== */
+.product-card .view-btn {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* ===== HOVER POP EFFECT ===== */
+.product-link:hover .view-btn {
+    transform: translateY(-3px) scale(1.05);
+    letter-spacing: 0.5px;
+}
+.product-card .view-btn {
+    transition: all 0.3s ease;
+}
+
+.product-link:hover .view-btn {
+    transform: translateY(-3px) scale(1.05);
+}
+
+.product-link:hover .view-btn::after {
+    margin-left: 5px;
+}
+/* ===== CATEGORY HEADINGS ===== */
+
+.category-heading {
+    margin-bottom: 30px;
+}
+
+.category-heading h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1a1a1a;
+    border-left: 4px solid #166FD3;
+    padding-left: 12px;
+}
+/* slider */
+/* ===== CATEGORY SLIDER ===== */
+
+.category-slider {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px 15px;
+
+    width: 100%;         /* ADD THIS */
+    max-width: 100%;     /* ADD THIS */
+}
+
+/* Hide scrollbar */
+.category-slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* IMPORTANT: add end spacing so last item is visible */
+.category-slider::after {
+    content: "";
+    flex: 0 0 20px; /* creates right spacing */
+}
+
+/* Item */
+.cat-item {
+    flex: 1;                /* auto adjust width */
+    min-width: 0;           /* allow shrinking */
+    max-width: 160px;       /* control size */
+
+    text-align: center;
+    padding: 18px 10px;
+
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+/* Icon */
+.cat-item i {
+    font-size: 22px;
+    color: #166FD3;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Text */
+.cat-item span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Hover */
+.cat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+    .category-slider {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cat-item {
+        flex: 0 0 30%; /* 3 per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .category-slider {
+        gap: 15px;
+        padding: 15px 12px;
+    }
+
+    .cat-item {
+        min-width: 115px;
+        padding: 14px 10px;
+    }
+
+    .cat-item i {
+        font-size: 20px;
+    }
+
+    .cat-item span {
+        font-size: 13px;
+    }
+}
+@media (max-width: 576px) {
+    .category-slider {
+        flex-direction: column; /* STACK */
+        align-items: center;
+    }
+
+    .cat-item {
+        width: 100%;          /* full width */
+        max-width: 320px;     /* nice centered card */
+    }
+}
+@media (max-width: 480px) {
+    .cat-item {
+        min-width: 100px;
+        padding: 12px 8px;
+    }
+
+    .cat-item i {
+        font-size: 18px;
+    }
+
+    .cat-item span {
+        font-size: 12px;
+    }
+}
+
+/* Smooth scroll globally */
+html {
+    scroll-behavior: smooth;
+}
+
+/* products final page css ends */
+/* ................................................................................ */
+
+
+
+
+/* market page css starts */
+/* india */
+/* ===== GLOBAL ===== */
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:#f8f8f6;
+  color:#1a1a18;
+}
+
+section{
+  padding:70px 0;
+}
+
+h1,h2{
+  font-weight:600;
+}
+
+/* ===== HERO ===== */
+.india-hero{
+  background:#0f172a;
+  color:#fff;
+  text-align:center;
+  padding:100px 20px;
+}
+.india-hero h1 {
+    color: #ffffff !important;
+     font-size: 55px !important;
+}
+.india-hero p{
+  color:#cfcfcf;
+}
+
+/* BUTTON */
+.btn-main{
+  background:#fff;
+  color:#1a1a18;
+  padding:12px 25px;
+  border-radius:6px;
+  margin:10px;
+  display:inline-block;
+  text-decoration:none;
+}
+
+/* LIGHT */
+.light-section{
+  background:#fff;
+}
+
+/* DARK */
+.dark-section{
+  background: #0f172a;
+  color:#fff;
+}
+
+.dark-section p{
+  color:#cfcfcf;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  margin-top:30px;
+}
+
+/* CARD */
+.card-box{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  border:1px solid #eee;
+  transition:.3s;
+}
+
+.card-box:hover{
+  transform:translateY(-5px);
+}
+
+/* DARK CARD */
+.dark-section .card-box{
+  background:#fff;
+  border:none;
+}
+.card-box {
+    color: #000000 !important;
+}
+/* INDUSTRY */
+.industry-card{
+  padding:20px;
+  border:1px solid #eee;
+  border-radius:10px;
+  background:#fff;
+  text-decoration:none;
+  color:#1a1a18;
+  transition:.3s;
+}
+
+.industry-card:hover{
+  transform:translateY(-5px);
+}
+
+/* DARK INDUSTRY */
+.dark-section .industry-card{
+  background:#2a2a28;
+  color:#fff;
+}
+
+/* CTA */
+.final-cta{
+  text-align:center;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+.india-hero h1 {
+    font-size: 48px !important;
+}
+
+@media (max-width: 992px) {
+    .india-hero h1 {
+        font-size: 36px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .india-hero h1 {
+        font-size: 28px !important;
+    }
+}
+.dark-section {
+    color: #fff;
+}
+
+.dark-section h1,
+.dark-section h2,
+.dark-section h3 {
+    color: #ffffff !important;
+}
+
+.dark-section p {
+    color: #d1d1d1 !important;
+}
+/* ===== SECTION ===== */
+.problem-section {
+    background: #f1f1f1;
+}
+
+/* ===== HEADING ===== */
+.problem-section .category-heading h3 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a1a18;
+}
+
+/* ===== CARD ===== */
+.problem-card {
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid #eee;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+/* ICON */
+.problem-card .icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: #eef3f9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.problem-card .icon i {
+    font-size: 26px;
+    color: #2a7de1;
+}
+
+/* TITLE */
+.problem-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #1a1a18;
+}
+
+/* TEXT */
+.problem-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .problem-section .category-heading h3 {
+        font-size: 24px;
+    }
+
+    .problem-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .problem-section .category-heading h3 {
+        font-size: 22px;
+    }
+
+    .problem-card {
+        padding: 25px 18px;
+    }
+
+    .problem-card .icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .problem-card .icon i {
+        font-size: 22px;
+    }
+}
+/* india page ends */
