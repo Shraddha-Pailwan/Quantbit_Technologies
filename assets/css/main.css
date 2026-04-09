@@ -18693,6 +18693,41 @@ font-size: 14px;
     padding-top: 60px;  /* adjust if still large */
     padding-bottom: 60px;
 }
+/* ===== FINAL FORCE FIX USING GRID ===== */
+.trading-header-final {
+    display: grid !important;
+    grid-template-columns: 1fr auto;  /* TEXT LEFT | BUTTON RIGHT */
+    align-items: center;
+    width: 100%;
+}
+
+/* TEXT LEFT */
+.trading-header-final .header-text {
+    text-align: left;
+}
+
+/* BUTTON RIGHT */
+.trading-header-final .header-btn {
+    justify-self: end;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .trading-header-final {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .trading-header-final .header-text {
+        text-align: center;
+    }
+
+    .trading-header-final .header-btn {
+        justify-self: center;
+    }
+}
 /* industries section 2 trading page css ends  */
 /* .................................................................................... */
 
@@ -18701,15 +18736,30 @@ font-size: 14px;
 
 /* .................................................................................... */
 /* industries section 3 retail page css starts  */
+/* ===== RETAIL SECTION DARK BG ===== */
+.retail-dark-section {
+    background: #0f172a;
+}
 
-/* ===== RETAIL GRID FIX ===== */
+/* ===== HEADER ===== */
+.retail-title {
+    color: #ffffff;
+}
+
+.retail-subtext {
+    color: #cbd5e1;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* ===== GRID ===== */
 .retail-grid-new {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
-/* ===== CARD STYLE ===== */
+/* ===== CARD DEFAULT (PURE WHITE) ===== */
 .retail-card-new {
     background: #ffffff;
     border-radius: 12px;
@@ -18717,25 +18767,36 @@ font-size: 14px;
     height: 100%;
 
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
+
+    /* REMOVE GREY SOURCE */
+    background-image: none;
+    box-shadow: none;
+}
+
+/* REMOVE ANY OVERLAY */
+.retail-card-new::before,
+.retail-card-new::after {
+    display: none;
 }
 
 /* clickable */
 .retail-card-link {
     text-decoration: none;
     color: inherit;
+    display: block;
+    height: 100%;
 }
 
-/* ===== CONTENT ===== */
-.retail-content h4 {
-    font-size: 18px;
-    margin-bottom: 12px;
+/* ===== TEXT DEFAULT ===== */
+.retail-card-new h4 {
     color: #1a1a1a;
+    margin-bottom: 12px;
 }
 
-/* ===== LIST ===== */
 .retail-list {
     list-style: none;
     padding: 0;
@@ -18749,30 +18810,1038 @@ font-size: 14px;
     font-size: 14px;
     color: #6c757d;
     line-height: 1.5;
+    transition: 0.3s;
 }
 
-/* icon bullet */
+/* tick */
 .retail-list li::before {
     content: "✔";
     position: absolute;
     left: 0;
     top: 0;
-    color: #28a745;
+    color: #22c55e;
     font-size: 12px;
+    transition: 0.3s;
 }
 
-/* ===== HOVER ONLY ON CARD (LIGHT) ===== */
+/* ===== HOVER (WORKING NOW 🔥) ===== */
 .retail-card-link:hover .retail-card-new {
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transform: translateY(-4px);
+    background: #166FD3;  /* your blue */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+/* heading on hover */
+.retail-card-link:hover .retail-card-new h4 {
+    color: #ffffff;
+}
+
+/* list text on hover */
+.retail-card-link:hover .retail-list li {
+    color: #ffffff;
+}
+
+/* tick on hover */
+.retail-card-link:hover .retail-list li::before {
+    color: #bbf7d0;
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* tablet */
+@media (max-width: 992px) {
+    .retail-grid-new {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* mobile */
 @media (max-width: 768px) {
     .retail-grid-new {
         grid-template-columns: 1fr;
     }
+
+    .retail-card-new {
+        padding: 20px;
+    }
+
+    .retail-card-new h4 {
+        font-size: 18px;
+    }
+
+    .retail-list li {
+        font-size: 13px;
+    }
+}
+
+/* small mobile */
+@media (max-width: 480px) {
+    .retail-card-new h4 {
+        font-size: 16px;
+    }
+
+    .retail-list li {
+        font-size: 12.5px;
+    }
+}
+.custom-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* THIS LINE WILL FLIP EVERYTHING */
+    flex-direction: row-reverse;
+}
+.custom-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap: 350px; /* 🔥 spacing between button & text */
+}
+@media (max-width: 992px) {
+    .custom-header-row {
+        flex-direction: column; /* stack properly */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .header-text {
+        text-align: center;
+        margin: 0;
+    }
+
+    .header-btn {
+        margin: 0;
+    }
+}
+
+
+/* RIGHT SIDE TEXT */
+.header-text {
+    text-align: right;
+    margin-left: auto; /* pushes text nicely to right */
+    max-width: 600px;
+}
+
+/* BUTTON SIDE */
+.header-btn {
+    margin-right: auto; /* keeps button properly on left */
 }
 
 /* industries section 3 retail page css ends  */
 /* .................................................................................... */
+
+
+
+/* ..................................................................................... */
+/* industries section 4 logistics page css starts */
+@media (max-width: 768px) {
+
+    .logistics-header-reverse {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    /* TEXT FIRST */
+    .logistics-header-reverse .header-text {
+        order: 1 !important;
+        width: 100%;
+        text-align: center !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+    }
+
+    /* SUBTEXT */
+    .logistics-subtext {
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    /* BUTTON LAST */
+    .logistics-header-reverse .header-btn {
+        order: 2 !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 768px) {
+
+    .logistics-header-reverse .header-btn {
+        width: 100%;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .logistics-header-reverse .header-btn a {
+        margin: 0 auto;
+        display: inline-block;
+    }
+}
+/* ===== HEADER REVERSE ===== */
+.logistics-header-reverse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* ===== FIX BUTTON FULL LEFT ===== */
+.logistics-header-reverse .header-btn {
+    margin-right: auto;
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* ===== KEEP TEXT RIGHT ===== */
+.logistics-header-reverse .header-text {
+    margin-left: auto;
+    text-align: left;
+        padding-left: 100px; /* adjust 10–20px as needed */
+
+}
+
+/* ===== SUBTEXT ===== */
+.logistics-subtext {
+    max-width: 550px;
+    margin-left: auto;
+    text-align: left;
+}
+
+/* ===== GRID (EQUAL HEIGHT USING FLEX) ===== */
+.logistics-grid-new {
+    display: flex;
+    gap: 25px;
+}
+
+/* each card column */
+.logistics-card-link {
+    flex: 1;
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===== CARD ===== */
+.logistics-card-new {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    transition: all 0.3s ease;
+}
+
+/* ===== TEXT ===== */
+.logistics-card-new h4 {
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+/* ===== LIST ===== */
+.logistics-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.logistics-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+}
+
+/* tick */
+.logistics-list li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #22c55e;
+    font-size: 12px;
+}
+
+/* ===== HOVER ===== */
+.logistics-card-link:hover .logistics-card-new {
+    background: #166FD3;
+    transform: translateY(-5px);
+}
+
+.logistics-card-link:hover h4,
+.logistics-card-link:hover li {
+    color: #ffffff;
+}
+
+.logistics-card-link:hover li::before {
+    color: #bbf7d0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .logistics-grid-new {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* stack cards */
+    .logistics-grid-new {
+        flex-direction: column;
+    }
+
+    /* header stack */
+    .logistics-header-reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .logistics-header-reverse .header-text {
+        text-align: left;
+        margin-left: 0;
+    }
+
+    .logistics-subtext {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logistics-card-new {
+        padding: 20px;
+    }
+
+    .logistics-card-new h4 {
+        font-size: 16px;
+    }
+
+    .logistics-list li {
+        font-size: 13px;
+    }
+}
+
+/* industries section 4 logistics page css ends */
+/* ...................................................................................... */
+
+
+
+/* ..................................................................................... */
+/* industries section 5 construction page css starts */
+/* ===== FACILITY DARK SECTION ===== */
+/* MOBILE / TABLET ONLY */
+
+@media (max-width: 992px) {
+
+    /* REMOVE right push */
+    .header-reverse .col-lg-6:last-child {
+        justify-content: center !important;
+        display: flex;
+    }
+
+    /* CENTER TEXT */
+    .header-reverse .section-title {
+        text-align: center;
+        width: 100%;
+    }
+
+    /* EXTRA SAFE (heading + paragraph) */
+    .header-reverse h2,
+    .header-reverse p {
+        text-align: center;
+    }
+}
+@media (max-width: 992px) {
+
+    .header-reverse {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TEXT first */
+    .header-reverse .col-lg-6:last-child {
+        order: 1;
+    }
+
+    /* BUTTON goes below */
+    .header-reverse .col-lg-6:first-child {
+        order: 2;
+    }
+
+    /* center align button nicely */
+    .header-btn {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+/* FORCE RIGHT SIDE TEXT BLOCK PROPERLY */
+.header-reverse .col-lg-6:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* MAIN FIX */
+.header-reverse .section-title {
+    width: 100%;
+    max-width: 500px;   /* 🔥 reduce width so heading doesn't stretch */
+    text-align: left;
+}
+
+/* EXTRA CONTROL (VERY IMPORTANT) */
+.header-reverse .industry-title {
+    width: 100%;
+    line-height: 1.2;
+}
+.facility-dark-section {
+    background: #0f172a !important;
+}
+
+/* ===== HEADING ===== */
+.facility-dark-section h2 {
+    color: #ffffff;
+}
+
+/* ===== PARAGRAPH ===== */
+.facility-dark-section p {
+    color: #e2e8f0; /* soft white for readability */
+}
+/* ===== FIX SUBTEXT CUTTING ISSUE (GLOBAL SAFE FIX) ===== */
+.trade-subtext,
+.header-text p {
+    display: block !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+}
+.trade-subtext {
+    max-width: 650px; /* control width instead of cutting */
+    line-height: 1.6;
+}
+/* ===== CONSTRUCTION SECTION ALIGN FIX (SCOPED) ===== */
+.construct-section-fix .header-text {
+    text-align: left;
+}
+
+.construct-section-fix .trade-subtext {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+}
+
+/* override any center alignment coming from theme */
+.construct-section-fix .header-text p {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+/* RIGHT SIDE BLOCK */
+.header-reverse .col-lg-6:last-child {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* TEXT BLOCK CONTROL */
+.header-reverse .section-title {
+    max-width: 520px;     /* 🔥 controls width */
+    width: 100%;
+    text-align: right;    /* ✅ RIGHT ALIGN TEXT */
+}
+
+/* HEADING */
+/* ===== FINAL HEADING FIX ===== */
+.construction-fix .industry-title {
+    display: inline-block;
+    white-space: nowrap !important;
+    width: max-content;
+    
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.2;
+
+    /* optional slight shift if needed */
+    position: relative;
+    right: 80px; /* adjust 20–60px if needed */
+    
+}
+
+/* PARAGRAPH */
+.construction-fix p {
+    margin: 0;
+}
+
+/* industries section 5 construction page css ends */
+/* ..................................................................................... */
+
+
+
+
+/* ...................................................................................... */
+/* industries section 6 agri page css starts */
+/* ===== HEADER ROW ===== */
+/* MOBILE / TABLET ONLY */
+@media (max-width: 992px) {
+
+    .agri-header-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TEXT FIRST */
+    .agri-header-row .col-lg-6:last-child {
+        order: 1;
+    }
+
+    /* BUTTON BELOW TEXT */
+    .agri-header-row .col-lg-6:first-child {
+        order: 2;
+    }
+
+    /* CENTER BUTTON */
+    .agri-header-row .header-btn {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+@media (max-width: 992px) {
+    .agri-section .agri-header-row {
+        flex-direction: column !important;
+    }
+}
+.sugar-fix .agri-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== BUTTON COLUMN (LEFT ALIGN WITH CARDS) ===== */
+.sugar-fix .agri-btn-col {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0 !important;   /* align with container */
+}
+
+/* remove any unwanted spacing */
+.sugar-fix .agri-btn-col .header-btn {
+    margin-left: 0;
+}
+
+.sugar-fix .agri-btn-col .theme-btn {
+    margin-left: 0;
+}
+
+/* ===== TEXT COLUMN (RIGHT ALIGN WITH LAST CARD) ===== */
+.sugar-fix .agri-text-col {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0 !important;  /* align with container */
+}
+
+/* ===== TEXT BLOCK ===== */
+.sugar-fix .agri-text-col .header-text {
+    max-width: 600px;
+
+    margin-left: auto;
+margin-right: 40px;   /* 🔥 increase this to push LEFT */   /* 🔥 KEY FIX (remove manual shift) */
+
+    text-align: right;
+}
+
+/* ===== HEADING ===== */
+.sugar-fix .agri-text-col h2 {
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* ===== SUBTEXT ===== */
+.sugar-fix .agri-text-col p {
+    color: #cbd5e1;
+    max-width: 520px;
+    margin-left: auto;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* 📱 RESPONSIVE FIXES */
+/* ============================= */
+
+/* ===== TABLET ===== */
+@media (max-width: 992px) {
+
+    .sugar-fix .agri-header-row {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .sugar-fix .agri-btn-col {
+        justify-content: center;
+    }
+
+    .sugar-fix .agri-text-col {
+        justify-content: center;
+    }
+
+    .sugar-fix .agri-text-col .header-text {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+    .sugar-fix .agri-text-col h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .sugar-fix .agri-text-col p {
+        text-align: center;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+}
+/* ===== AGRI SECTION LIGHT BACKGROUND ONLY ===== */
+.section-padding.section-bg-2.sugar-fix.section-dark:has(.agri-header-row) {
+    background-color: #f5f7fa !important;
+}
+.agri-section .industry-title {
+    color: #0f172a !important;
+}
+
+.agri-section p {
+    color: #475569 !important;
+}
+/* ===== NEW SWAP LAYOUT ===== */
+.swap-header .agri-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* TEXT → LEFT */
+.swap-header .agri-text-col {
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 0 !important;
+}
+
+.swap-header .agri-text-col .header-text {
+    margin: 0;
+    text-align: left;
+}
+
+/* BUTTON → RIGHT */
+.swap-header .agri-btn-col {
+    order: 2;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0 !important;
+}
+
+.swap-header .agri-btn-col .header-btn,
+.swap-header .agri-btn-col .theme-btn {
+    margin: 0;
+}
+/* FORCE BOTH COLUMNS SAME HEIGHT */
+.swap-header .agri-header-row {
+    display: flex;
+    align-items: stretch;   /* 🔥 important */
+}
+
+/* TEXT COLUMN */
+.swap-header .agri-text-col {
+    display: flex;
+    align-items: center;    /* center text vertically */
+}
+
+/* BUTTON COLUMN */
+.swap-header .agri-btn-col {
+    display: flex;
+    align-items: center;    /* center button vertically */
+    justify-content: flex-end;
+}
+/* override bootstrap alignment */
+.swap-header .agri-header-row {
+    align-items: center !important;
+}
+
+/* make both columns behave same */
+.swap-header .agri-text-col,
+.swap-header .agri-btn-col {
+    display: flex;
+    align-items: center;   /* 🔥 THIS FIXES IT */
+}
+
+/* keep text left */
+.swap-header .agri-text-col {
+    justify-content: flex-start;
+}
+
+/* keep button right */
+.swap-header .agri-btn-col {
+    justify-content: flex-end;
+}
+
+/* REMOVE extra spacing causing shift */
+.swap-header .header-text h2,
+.swap-header .header-text p {
+    margin: 0;
+}
+/* industries section 6 agri page css ends */
+/* ..................................................................................... */
+
+
+
+/* ...................................................................................... */
+/* industries section 7 healthcare page css starts */
+/* ===== SECTION ===== */
+.health-pro-section {
+    background: rgb(15, 23, 42);
+    padding: 80px 0;
+}
+
+/* ===== HEADING + SUBTEXT WHITE (NEW CLASS) ===== */
+.health-pro-heading h2 {
+    color: #ffffff;
+}
+
+.health-pro-heading p {
+    color: #e2e8f0; /* slightly lighter white */
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.health-pro-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+/* ===== IMAGE ===== */
+.health-pro-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+/* ===== CONTENT ===== */
+.health-pro-content {
+    flex: 1;
+}
+
+/* ===== HIGHLIGHT ===== */
+.health-pro-highlight h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.health-pro-highlight p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+/* ===== FEATURES ===== */
+.health-pro-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+/* ===== FEATURE ITEMS ===== */
+.health-pro-item {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e2e8f0;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: 0.2s ease;
+}
+
+/* hover */
+.health-pro-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+
+    .health-pro-layout {
+        flex-direction: column;
+    }
+
+    .health-pro-features {
+        grid-template-columns: 1fr;
+    }
+}
+/* ===== CLICKABLE HEADING LINK ===== */
+.health-pro-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+/* hover effect */
+.health-pro-link:hover {
+    color: #60a5fa; /* soft blue highlight */
+}
+/* ===== SECTION ===== */
+.health-pro-section {
+    background: rgb(15, 23, 42);
+    padding: 80px 0;
+}
+
+/* ===== HEADING ===== */
+.health-pro-heading h2 {
+    color: #ffffff;
+    
+}
+
+.health-pro-heading p {
+    color: #e2e8f0;
+    max-width: 600px;
+    line-height: 1.6;
+    
+}
+
+/* ===== LAYOUT ===== */
+.health-pro-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+/* ===== IMAGE ===== */
+.health-pro-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+/* ===== CONTENT ===== */
+.health-pro-content {
+    flex: 1;
+}
+
+/* ===== HIGHLIGHT ===== */
+.health-pro-highlight h3 {
+    margin-bottom: 10px;
+}
+
+.health-pro-link {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.health-pro-link:hover {
+    color: #60a5fa;
+}
+
+.health-pro-highlight p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+/* ===== FEATURES GRID ===== */
+.health-pro-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+/* ===== FEATURE ITEMS ===== */
+.health-pro-item {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e2e8f0;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: 0.2s ease;
+}
+
+/* hover */
+.health-pro-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+
+    .health-pro-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .health-pro-features {
+        grid-template-columns: 1fr;
+    }
+
+    .health-pro-heading {
+        text-align: center;
+    }
+    
+}
+/* industries section 7 healthcare page css starts */
+/* ...................................................................................... */
+
+
+
+
+/* ........................................................................................*/
+/* industries section 8 restuarant page css starts */
+
+/* ===== SECTION ===== */
+.restrox-section {
+    background: #f5f7fa;
+    padding: 80px 0;
+}
+
+/* ===== HEADER TEXT ===== */
+.restrox-header-text {
+    max-width: 600px;
+    margin-left: auto;
+}
+
+.restrox-title {
+    color: #0f172a;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.restrox-subtext {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* ===== LAYOUT ===== */
+.restrox-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+/* ===== CONTENT ===== */
+.restrox-content {
+    flex: 1;
+}
+
+/* ===== HIGHLIGHT ===== */
+.restrox-highlight h3 {
+    margin-bottom: 10px;
+}
+
+.restrox-link {
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.restrox-link:hover {
+    color: #2563eb;
+}
+
+.restrox-highlight p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+/* ===== FEATURES ===== */
+.restrox-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+/* ===== ITEMS ===== */
+.restrox-item {
+    background: #ffffff;
+    color: #1e293b;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: 0.2s ease;
+}
+
+.restrox-item:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== IMAGE ===== */
+.restrox-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+
+    .restrox-layout {
+        flex-direction: column;
+    }
+
+    .restrox-features {
+        grid-template-columns: 1fr;
+    }
+
+    .restrox-header-text {
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+/* ===== FORCE ORDER FIX (WORKING) ===== */
+@media (max-width: 992px) {
+
+    .restrox-section .row.align-items-center {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* TEXT COLUMN (SECOND IN HTML → MAKE FIRST) */
+    .restrox-section .row.align-items-center > div:nth-child(2) {
+        order: 1;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* BUTTON COLUMN (FIRST IN HTML → MAKE SECOND) */
+    .restrox-section .row.align-items-center > div:nth-child(1) {
+        order: 2;
+        text-align: center;
+    }
+
+}
+
+/* industries section 8 restuarant page css ends */
+
+
+
+/* ................................................................................ */
+/* heading alternate fixed */
