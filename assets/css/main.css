@@ -15435,7 +15435,7 @@ font-size:18px;line-height:1.3;white-space:normal;display:-webkit-box;
     content: "✔";
     position: absolute;
     left: 0;
-    color: #4f46e5; /* theme accent */
+    color: #166FD3; /* theme accent */
     font-size: 13px;
 }
 
@@ -15571,7 +15571,7 @@ font-size:18px;line-height:1.3;white-space:normal;display:-webkit-box;
     content: "✔";
     position: absolute;
     left: 0;
-    color: #4f46e5;
+    color: #166FD3;
     font-size: 13px;
 }
 
@@ -19531,7 +19531,24 @@ margin-right: 40px;   /* 🔥 increase this to push LEFT */   /* 🔥 KEY FIX (r
     max-width: 600px;
     line-height: 1.6;
 }
+/* Desktop (already working - keep it) */
+#healthcare .industry-title {
+    display: block !important;
+    width: 100% !important;
+    right: 0 !important;
+    text-align: right !important;
+}
 
+/* Mobile only */
+@media (max-width: 576px) {
+    #healthcare .industry-title {
+        text-align: center !important;
+    }
+
+    #healthcare .section-title p {
+        text-align: center !important;
+    }
+}
 /* ===== MAIN LAYOUT ===== */
 .health-pro-layout {
     display: flex;
@@ -19706,6 +19723,7 @@ margin-right: 40px;   /* 🔥 increase this to push LEFT */   /* 🔥 KEY FIX (r
     }
     
 }
+
 /* industries section 7 healthcare page css starts */
 /* ...................................................................................... */
 
@@ -20375,3 +20393,810 @@ h1,h2{
     }
 }
 /* india page ends */
+
+
+
+
+/* case studies page css */
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HERO */
+.hero {
+    background: #111827;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #d1d5db;
+    font-size: 18px;
+}
+
+/* SECTION */
+.section {
+    padding: 50px 0;
+}
+
+.section h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+    border-left: 4px solid #166FD3;
+    padding-left: 10px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #166FD3;
+}
+
+/* TAG */
+.tag {
+    display: inline-block;
+    background: #eef2ff;
+    color: #166FD3;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+/* TEXT */
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* READ MORE */
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #166FD3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        font-size: 22px;
+    }
+}
+.case-hero h1 {
+    color: #fff;
+}
+/* case studies page css ends */
+
+
+
+
+/* careers page css starts */
+
+/* ===== CAREERS SECTION ===== */
+
+.careers-section {
+    padding: 80px 20px;
+    background: #ffffff; /* dark modern theme */
+    color: #fff;
+}
+
+.careers-container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.careers-content h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.careers-content p {
+    font-size: 17px;
+    color: #222222;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+.careers-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    background: #166fd3;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background: #166FD3;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    border: 1px solid #94a3b8;
+    color: #166FD3;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* NOTE */
+.note {
+    display: block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .careers-content h2 {
+        font-size: 30px;
+    }
+
+    .careers-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* careers page css ends */
+
+
+
+/* compare erp tally page css starts*/
+/* ===== COMPARE SECTION ===== */
+.compare-section {
+    padding: 80px 0;
+    background: #f9fafc;
+}
+
+.compare-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.compare-header h2 {
+    font-size: 34px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.compare-header p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* ===== TABLE ===== */
+.compare-table-wrapper {
+    overflow-x: auto;
+}
+
+.compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.compare-table th,
+.compare-table td {
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+.compare-table th {
+    background: #f4f6f9;
+    font-weight: 600;
+}
+
+/* Highlight ERPNext column */
+.compare-table .highlight {
+    background: #f0f7ff;
+    font-weight: 500;
+}
+
+/* Hover effect */
+.compare-table tbody tr:hover {
+    background: #fafafa;
+}
+
+/* ===== CTA ===== */
+.compare-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #0056b3;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 28px;
+    border: 1px solid #007bff;
+    color: #007bff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-secondary:hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .compare-header h2 {
+        font-size: 26px;
+    }
+
+    .compare-table th,
+    .compare-table td {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        display: block;
+        margin: 10px auto;
+        width: 80%;
+        text-align: center;
+    }
+}
+/* ===== CENTER CTA (SAFE - NO CONFLICT) ===== */
+.compare-cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+/* ===== CTA CENTER WRAPPER ===== */
+.compare-cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 15px; /* mobile spacing */
+}
+
+/* Prevent extra spacing issues */
+.compare-cta-center .hero-button {
+    margin: 0;
+    width: auto;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+
+    .compare-cta-center {
+        margin-top: 30px;
+    }
+
+    .compare-cta-center .hero-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .compare-cta-center .theme-btn {
+        width: 100%;
+        max-width: 280px; /* keeps it neat */
+        text-align: center;
+        padding: 14px 20px;
+        font-size: 15px;
+    }
+}
+
+/* ===== SMALL MOBILE (EXTRA SAFE) ===== */
+@media (max-width: 480px) {
+
+    .compare-cta-center .theme-btn {
+        max-width: 240px;
+        font-size: 14px;
+        padding: 12px 18px;
+    }
+}
+
+/* compare erp tally page css ends */
+
+
+
+/* market page css starts */
+
+/* ===== Market Cards Section ===== */
+.market-cards-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+/* Grid Layout */
+.market-cards-section .market-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* Card */
+.market-cards-section .market-card {
+    background: #f9fafc;
+    border-radius: 12px;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    border: 1px solid #eee;
+}
+
+/* Icon */
+.market-cards-section .market-card .icon {
+    font-size: 28px;
+    color: #166FD3;
+    margin-bottom: 12px;
+}
+
+/* Title */
+.market-cards-section .market-card h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #222;
+}
+
+/* Hover */
+.market-cards-section .market-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .market-cards-section .market-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .market-cards-section .market-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .market-cards-section .market-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* market page css ends */
+
+
+
+/* faqs page css starts */
+
+/* ===== FAQ Section ===== */
+.faq-section {
+    background: #f9fafc;
+    padding: 80px 0;
+}
+
+.faq-section .section-title p {
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+/* FAQ Wrapper */
+.faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* FAQ Item */
+.faq-item {
+    background: #fff;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Question */
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    cursor: pointer;
+}
+
+.faq-question h4 {
+    font-size: 16px;
+    margin: 0;
+    color: #222;
+}
+
+.faq-icon {
+    font-size: 20px;
+    color: #4f46e5;
+}
+
+/* Answer */
+.faq-answer {
+    display: none;
+    padding: 0 20px 18px;
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Active */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* Hover */
+.faq-item:hover {
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .faq-question h4 {
+        font-size: 14px;
+    }
+}
+
+
+/* faqs page css ends */
+/* Only this specific heading */
+.case-title {
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+/* Mobile optimization */
+@media (max-width: 575px) {
+    .case-title {
+        font-size: 20px;
+        white-space: nowrap;   /* Force single line */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Optional: adds ... if too long */
+    }
+}
+.crm-responsive-fix h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    
+    white-space: normal;        /* Allow line break */
+    overflow: visible;          /* Remove clipping */
+    text-overflow: unset;       /* Remove ... */
+    
+    word-break: break-word;     /* Break long words */
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .crm-responsive-fix h2 {
+        font-size: 24px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .crm-responsive-fix h2 {
+        font-size: 20px;
+        padding: 0 10px;        /* Small spacing for better look */
+    }
+}
+
+/* Extra small */
+@media (max-width: 400px) {
+    .crm-responsive-fix h2 {
+        font-size: 18px;
+    }
+}
+/* Custom Heading Fix - No Conflict */
+.custom-responsive-title h2 {
+    font-size: 30px;
+    line-height: 1.4;
+
+    white-space: normal !important;   /* Override nowrap */
+    overflow: visible;
+    text-overflow: unset;
+
+    word-break: break-word;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .custom-responsive-title h2 {
+        font-size: 26px;
+        max-width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .custom-responsive-title h2 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
+}
+
+/* Extra small */
+@media (max-width: 400px) {
+    .custom-responsive-title h2 {
+        font-size: 20px;
+    }
+}
+/* Reusable Heading Fix */
+.fix-heading-wrap h2 {
+    font-size: 30px;
+    line-height: 1.4;
+
+    white-space: normal !important;   /* Override theme */
+    overflow: visible;
+    text-overflow: unset;
+
+    word-break: break-word;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .fix-heading-wrap h2 {
+        font-size: 26px;
+        max-width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .fix-heading-wrap h2 {
+        font-size: 22px;
+        padding: 0 12px;
+    }
+}
+
+/* Extra small */
+@media (max-width: 400px) {
+    .fix-heading-wrap h2 {
+        font-size: 20px;
+    }
+}
+/* UNIVERSAL HEADING FIX */
+.fix-heading-wrap h2 {
+    font-size: 30px;
+    line-height: 1.4;
+
+    white-space: normal !important;   /* Override nowrap */
+    overflow: visible;
+    text-overflow: unset;
+
+    word-break: break-word;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .fix-heading-wrap h2 {
+        font-size: 26px;
+        max-width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .fix-heading-wrap h2 {
+        font-size: 22px;
+        padding: 0 12px;
+    }
+}
+
+/* Small devices */
+@media (max-width: 400px) {
+    .fix-heading-wrap h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+/* universal heaidng fix */
+
+
+/* UNIVERSAL HEADING WRAPPER */
+.universal-heading-wrap {
+    width: 100%;
+    padding: 0 12px;              /* safe spacing on mobile */
+    box-sizing: border-box;
+}
+
+.universal-heading-wrap h1,
+.universal-heading-wrap h2,
+.universal-heading-wrap h3,
+.universal-heading-wrap h4,
+.universal-heading-wrap h5,
+.universal-heading-wrap h6 {
+
+    /* Core Fix */
+    white-space: normal !important;   /* override nowrap */
+    overflow-wrap: break-word;
+    word-break: break-word;
+
+    /* Layout Control */
+    max-width: 100%;
+    margin: 0 auto;
+    line-height: 1.4;
+
+    /* Prevent overflow */
+    overflow: hidden;
+}
+
+/* Desktop optimization */
+@media (min-width: 992px) {
+    .universal-heading-wrap h1,
+    .universal-heading-wrap h2,
+    .universal-heading-wrap h3 {
+        max-width: 900px;   /* keeps heading readable */
+    }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .universal-heading-wrap h1 { font-size: 32px; }
+    .universal-heading-wrap h2 { font-size: 26px; }
+    .universal-heading-wrap h3 { font-size: 22px; }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .universal-heading-wrap h1 { font-size: 26px; }
+    .universal-heading-wrap h2 { font-size: 22px; }
+    .universal-heading-wrap h3 { font-size: 20px; }
+}
+
+/* use?? universal */
+/* <div class="universal-heading-wrap"> */
+
+
+/* ONLY MOBILE FIX - Desktop untouched */
+@media (max-width: 576px) {
+    .industry-heading-wrap .industry-title {
+
+        /* Override problematic desktop styles */
+        display: block !important;
+        width: 100% !important;
+        right: 0 !important;
+        position: static !important;
+
+        /* Allow wrapping */
+        white-space: normal !important;
+        word-break: break-word;
+
+        /* Responsive font */
+        font-size: 22px !important;
+        line-height: 1.3;
+
+        /* Optional UI improvement */
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+/* Extra small mobile */
+@media (max-width: 400px) {
+    .industry-heading-wrap .industry-title {
+        font-size: 20px !important;
+    }
+}
+#healthcare .section-title {
+    max-width: 100% !important;   /* remove 520px restriction */
+}
+#healthcare .header-reverse {
+    justify-content: flex-end;
+}
