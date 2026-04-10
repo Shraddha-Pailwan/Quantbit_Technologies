@@ -21200,3 +21200,279 @@ body {
 #healthcare .header-reverse {
     justify-content: flex-end;
 }
+
+/* home features starts */
+.features-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+/* HEADING FIX */
+.features-title {
+    color: #222222;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/* CARD FIX */
+.feature-card {
+    background: #ffffff;
+    padding: 40px 20px;
+    border-radius: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 220px; /* important for equal size */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ICON */
+.feature-card i {
+    font-size: 45px;
+    color: #166fd3;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.feature-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222222;
+}
+
+/* HOVER EFFECT */
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 768px) {
+    .feature-card {
+        height: auto;
+        padding: 30px;
+    }
+}
+
+
+/* home features ends */
+/* home section 3 starts*/
+
+.quantbit-hero {
+    background: #0f172a;
+    padding: 100px 0;
+}
+
+/* HEADING */
+.qb-title {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* SUBTITLE */
+.qb-subtitle {
+    color: #e2e8f0;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+
+/* POINTS GRID */
+.qb-points {
+    margin-top: 20px;
+}
+
+/* SINGLE POINT */
+.qb-point {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 20px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* HOVER */
+.qb-point:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .qb-title {
+        font-size: 28px;
+    }
+
+    .qb-subtitle {
+        font-size: 15px;
+    }
+
+    .quantbit-hero {
+        padding: 70px 20px;
+    }
+}
+
+/* home section 3 ends */
+/* home case starts */
+.case-study-items {
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 16px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* ICON STYLE */
+.case-study-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: #166fd3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-icon i {
+    color: #fff;
+    font-size: 32px;
+}
+
+/* HOVER */
+.case-study-items:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* TEXT */
+.case-study-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.case-study-content p {
+    font-size: 15px;
+    color: #555;
+}
+/* bg prominent section */
+.quantbit-hero {
+    background: url('../img/home-images/home-page/services.jpg') no-repeat center center/cover;
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* DARK OVERLAY (IMPORTANT for readability) */
+.quantbit-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(15, 23, 42, 0.75),
+        rgba(15, 23, 42, 0.55)
+    );
+    z-index: -1;
+}
+
+/* TEXT */
+.qb-title {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.qb-subtitle {
+    color: #e2e8f0;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 50px;
+}
+
+/* POINT CARDS */
+.qb-point {
+    background: rgba(15, 23, 42, 0.6);
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.qb-point:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .qb-title {
+        font-size: 28px;
+    }
+
+    .qb-subtitle {
+        font-size: 15px;
+    }
+
+    .quantbit-hero {
+        padding: 70px 20px;
+    }
+}
+
+/* GLASS EFFECT + BORDER */
+.qb-point {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+
+    padding: 16px 22px;
+    color: #ffffff;
+    font-size: 16px;
+
+    transition: all 0.3s ease;
+}
+
+/* HOVER GLOW EFFECT */
+.qb-point:hover {
+    background: rgba(22, 111, 211, 0.25); /* your brand blue */
+    border-color: #166fd3;
+
+    transform: translateY(-6px) scale(1.02);
+
+    box-shadow: 0 10px 30px rgba(22, 111, 211, 0.35);
+}
+
+/* ICON / CHECK ALIGN (if using ✔) */
+.qb-point::before {
+   
+    margin-right: 10px;
+    color: #38bdf8;
+    font-weight: bold;
+}
+.qb-title {
+    text-shadow: 0 3px 15px rgba(0,0,0,0.5);
+}
+
+.qb-subtitle {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+.qb-subtitle {
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
