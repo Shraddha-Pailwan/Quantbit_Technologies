@@ -20317,7 +20317,7 @@ h1,h2{
 .problem-section .category-heading h3 {
     font-size: 28px;
     font-weight: 600;
-    color: #1a1a18;
+    color: #fff;
 }
 
 /* ===== CARD ===== */
@@ -22387,4 +22387,95 @@ html {
     .filter-bar {
         flex-direction: column;
     }
+}
+/* uae css */
+/* ===== LIGHT SECTION ===== */
+.section-light {
+    background: #ffffff;
+    color: #1a1a18;
+}
+
+/* TEXT */
+.section-light p {
+    color: #555;
+}
+
+/* CARDS */
+.section-light .card-box,
+.section-light .problem-card {
+    background: #ffffff;
+    color: #1a1a18;
+    border: 1px solid #eee;
+}
+
+/* ===== DARK SECTION ===== */
+.section-dark {
+    background: #020c2a;
+    color: #ffffff;
+}
+
+/* TEXT */
+.section-dark p {
+    color: #cbd5e1;
+}
+
+/* HEADINGS */
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+    color: #ffffff;
+}
+
+/* CARDS */
+.section-dark .card-box,
+.section-dark .problem-card {
+    background: #1e293b;
+    color: #ffffff;
+    border: none;
+}
+
+/* FORCE TEXT WHITE INSIDE */
+.section-dark .card-box *,
+.section-dark .problem-card * {
+    color: #ffffff;
+}
+
+/* DESCRIPTION */
+.section-dark .problem-card p {
+    color: #cbd5e1;
+}
+
+/* ===== CTA SPECIAL (LIGHT ALWAYS) ===== */
+.final-cta {
+    background: #f8fafc;
+    color: #1a1a18;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* ===== HOVER (PREMIUM FEEL) ===== */
+.card-box:hover,
+.problem-card:hover {
+    transform: translateY(-6px);
+    transition: 0.3s ease;
+}
+
+/* DARK HOVER */
+.section-dark .card-box:hover,
+.section-dark .problem-card:hover {
+    background: #2563eb;
+}
+/* REMOVE LINK STYLE */
+.card-link {
+    text-decoration: none;
+    display: block;
+}
+
+/* MAKE WHOLE CARD CLICKABLE */
+.card-link:hover {
+    text-decoration: none;
+}
+
+/* OPTIONAL: POINTER CURSOR */
+.card-link .problem-card {
+    cursor: pointer;
 }
