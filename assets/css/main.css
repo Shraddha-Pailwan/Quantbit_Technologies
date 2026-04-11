@@ -22420,11 +22420,7 @@ html {
 }
 
 /* HEADINGS */
-.section-dark h1,
-.section-dark h2,
-.section-dark h3 {
-    color: #ffffff;
-}
+
 
 /* CARDS */
 .section-dark .card-box,
@@ -22478,4 +22474,363 @@ html {
 /* OPTIONAL: POINTER CURSOR */
 .card-link .problem-card {
     cursor: pointer;
+}
+/* helpdesk internal */
+/* ===== HELP DESK SECTION ===== */
+.helpdesk-section {
+    max-width: 850px;
+    margin: auto;
+}
+
+/* PARAGRAPH TEXT */
+.helpdesk-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* SECOND LINE (CTA STYLE) */
+.helpdesk-section p:last-child {
+    font-size: 17px;
+    color: #1a1a18;
+}
+
+/* LINKS → MAKE THEM LOOK IMPORTANT */
+.helpdesk-section a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* UNDERLINE EFFECT (MODERN UI) */
+.helpdesk-section a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #2563eb;
+    transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.helpdesk-section a:hover::after {
+    width: 100%;
+}
+
+/* HOVER COLOR */
+.helpdesk-section a:hover {
+    color: #1d4ed8;
+}
+
+/* OPTIONAL: MAKE LINKS LOOK CLICKABLE */
+.helpdesk-section a {
+    cursor: pointer;
+}
+
+/* SPACING DIV */
+.section-space {
+    height: 80px;
+    background: #ffffff;
+}
+/* ===== AGRI SECTION ===== */
+
+/* ===== MANUFACTURING SECTION (CLEAN) ===== */
+.manufacturing-section {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TEXT */
+.manufacturing-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    letter-spacing: 0.2px;
+}
+
+/* FIRST PARA (IMPORTANT) */
+.manufacturing-section p:first-child {
+    font-size: 17px;
+    color: #1a1a18;
+}
+
+/* LAST PARA (SLIGHT EMPHASIS) */
+.manufacturing-section p:last-child {
+    font-weight: 500;
+    color: #1a1a18;
+}
+
+/* LINK STYLE (MAIN CTA FEEL) */
+.manufacturing-section a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* UNDERLINE ANIMATION */
+.manufacturing-section a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #2563eb;
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.manufacturing-section a:hover::after {
+    width: 100%;
+}
+
+.manufacturing-section a:hover {
+    color: #1d4ed8;
+}
+
+/* OPTIONAL SUBTLE ARROW (VERY LIGHT) */
+.manufacturing-section a::before {
+    content: "→";
+    margin-right: 6px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.manufacturing-section a:hover::before {
+    opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .manufacturing-section p {
+        font-size: 15px;
+    }
+}
+/* ===== SOLUTION LINKS ===== */
+.solution-links p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* LINKS */
+.solution-links a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+/* UNDERLINE EFFECT */
+.solution-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #2563eb;
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.solution-links a:hover::after {
+    width: 100%;
+}
+
+.solution-links a:hover {
+    color: #1d4ed8;
+}
+
+/* SEPARATOR */
+.solution-links .sep {
+    margin: 0 8px;
+    color: #aaa;
+}
+
+/* MOBILE STACK (VERY IMPORTANT) */
+@media (max-width: 576px) {
+    .solution-links p {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .solution-links .sep {
+        display: none;
+    }
+}
+/* ===== SOLUTION LINKS ===== */
+.solution-links p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* LINKS */
+.solution-links a {
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* UNDERLINE ANIMATION */
+.solution-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #2563eb;
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.solution-links a:hover::after {
+    width: 100%;
+}
+
+.solution-links a:hover {
+    color: #1d4ed8;
+}
+
+/* SEPARATOR */
+.solution-links .sep {
+    margin: 0 8px;
+    color: #aaa;
+}
+
+/* MOBILE STACK */
+@media (max-width: 576px) {
+    .solution-links p {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .solution-links .sep {
+        display: none;
+    }
+}
+/* SEPARATOR */
+.sep {
+    margin: 0 8px;
+    color: #aaa;
+}
+
+/* MOBILE STACK */
+@media (max-width: 576px) {
+    .manufacturing-section p:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .sep {
+        display: none;
+    }
+}
+/* SEPARATOR */
+.sep {
+    margin: 0 8px;
+    color: #aaa;
+}
+
+/* MOBILE STACK */
+@media (max-width: 576px) {
+    .manufacturing-section p:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .sep {
+        display: none;
+    }
+}
+/* ===== AGRI HIGHLIGHT SECTION ===== */
+.agri-highlight {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* TEXT */
+.agri-highlight p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* LINK (MAIN FOCUS) */
+.agri-highlight a {
+    color: #166fd3;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* UNDERLINE EFFECT */
+.agri-highlight a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+    background: #166fd3;
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+.agri-highlight a:hover::after {
+    width: 100%;
+}
+
+.agri-highlight a:hover {
+    color: #0f5bb5;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .agri-highlight p {
+        font-size: 15px;
+    }
+}
+/* footer css */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px 15px;
+}
+
+.product-list li {
+    list-style: none;
+}
+
+.product-list li a {
+    font-size: 14px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.product-list li a:hover {
+    color: #166fd3; /* your brand blue */
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+    .product-list {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
 }
