@@ -690,4 +690,72 @@
         
 
 })(jQuery); // End jQuery
+function animateDecimalCounters() {
+    const counters = document.querySelectorAll('.count-decimal');
+    if (counters.length === 0) return;
+
+    const startCounter = (counter) => {
+        const target = parseFloat(counter.getAttribute('data-count')) || 0;
+        let count = 0;
+        counter.innerText = count.toFixed(2);
+
+        const updateCounter = () => {
+            const increment = target / 100;
+            count = Math.min(count + increment, target);
+            counter.innerText = count.toFixed(2);
+
+            if (count < target) {
+                setTimeout(updateCounter, 20);
+            }
+        };
+
+        updateCounter();
+    };
+
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter(entry.target);
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+
+        counters.forEach(counter => {
+            counter.textContent = '0.00';
+            observer.observe(counter);
+        });
+    } else {
+        counters.forEach(startCounter);
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', animateDecimalCounters);
+} else {
+    animateDecimalCounters();
+}
+
+
+
+
+// ................
+const sections = document.querySelectorAll('.reveal');
+
+if (sections.length > 0) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.4 });
+
+    sections.forEach(section => observer.observe(section));
+}
+// for digital platforms
+
+
+
 
