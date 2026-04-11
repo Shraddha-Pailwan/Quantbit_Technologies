@@ -21476,3 +21476,106 @@ body {
     max-width: 750px;
     margin: 0 auto 50px;
 }
+/* hero universal */
+/* REDUCE HERO HEIGHT */
+.hrms-hero-custom {
+    min-height: 75vh;   /* earlier it feels like 100vh */
+    display: flex;
+    align-items: center;
+    padding: 60px 0;   /* reduce top-bottom spacing */
+}
+
+/* CONTROL TEXT WIDTH (better fit) */
+.hero-content {
+    max-width: 600px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+    .hrms-hero-custom {
+        min-height: auto;
+        padding: 80px 20px 60px;
+    }
+}
+
+/* products card space */
+/* REDUCE ALL SECTION SPACING */
+.section-padding {
+    padding: 60px 0 !important;   /* from 120px → 60px */
+}
+
+/* DEFAULT SECTION FIX */
+section {
+    padding: 50px 0 !important;   /* override base */
+}
+
+/* FIX FOR SMALL SCREENS */
+@media (max-width: 991px) {
+    .section-padding {
+        padding: 40px 0 !important;
+    }
+
+    section {
+        padding: 35px 0 !important;
+    }
+}
+/* alternate bg for products */
+/* Alternating section backgrounds */
+.section-dark-alt {
+    background-color: #0f172a; /* dark */
+    color: #ffffff;
+}
+
+.section-dark-alt h3,
+.section-dark-alt p {
+    color: #ffffff;
+}
+
+.section-light-alt {
+    background-color: #ffffff; /* white */
+    color: #222222;
+}
+
+.section-light-alt h3,
+.section-light-alt p {
+    color: #222222;
+}
+/* Dark section */
+.section-dark-alt {
+    background-color: #0f172a;
+    color: #ffffff; /* for headings outside cards */
+}
+
+/* KEEP CARDS WHITE */
+.section-dark-alt .product-card {
+    background: #ffffff;
+    color: #222222;
+}
+
+/* FORCE TEXT INSIDE CARD TO DARK */
+.section-dark-alt .product-card h3,
+.section-dark-alt .product-card p,
+.section-dark-alt .product-card span {
+    color: #222222 !important;
+}
+
+/* ICON FIX */
+.section-dark-alt .product-card .icon i {
+    color: #2563eb; /* nice blue */
+}
+
+/* VIEW BUTTON */
+.section-dark-alt .product-card .view-btn {
+    color: #2563eb !important;
+}
+.header-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo img {
+    width: 180px;   /* control size here */
+    height: auto;
+}
